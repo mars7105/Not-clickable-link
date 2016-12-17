@@ -16,22 +16,25 @@
   span {
     color: red;
   }
-  
+  .link{
+	  display:none;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 <div>Wait 3 seconds over any link. / Halte den Mauszeiger 3 Skunden über dem Link.</div> 
 <ul>
-  <li class="link">https://www.mozilla.org/en-US/</li>
-  <li class="link">https://github.com/</li>
+  <li class="url"><p class="link">https://www.mozilla.org/en-US/</p><p class="attribute">Mozilla</p></li>
+  
+  <li class="url"><p class="link">https://github.com/</p><p class="attribute">github</p></li>
 </ul>
  <div id="test" class="display:none;"></div>
 <script>
-$( ".link" ).hover(
+$( ".url" ).hover(
   function() {
 	
-		var thisLink = $( this ).html();
+		var thisLink = $( this ).children(".link").html();
 		function openLink(){
 			htmllink = $( "#test" ).html();
 			if (thisLink == htmllink ) {
@@ -39,7 +42,7 @@ $( ".link" ).hover(
 			}
 		};
 		$( this ).css( "color", "red" );
-		$( "#test" ).text($( this ).html());
+		$( "#test" ).text($( this ).children(".link").html());
 		$( "#test" ).css( "display", "none" );
 		setTimeout(openLink, 3000 ); // 3 seconds
   },function() {
