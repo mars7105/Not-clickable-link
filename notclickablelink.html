@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hover demo</title>
+  <style>
+  ul {
+	  float:left;
+    margin-left: 20px;
+    color: blue;
+    display:block;
+  }
+  li {
+    
+  }
+  span {
+    color: red;
+  }
+  
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<ul>
+  <li class="link">https://www.mozilla.org/en-US/</li>
+  <li class="link">https://github.com/</li>
+</ul>
+ <div id="test" class="display:none;"></div>
+<script>
+$( "li.link" ).hover(
+  function() {
+	
+		var thisLink = $( this ).html();
+		function load_side( htmllink){
+		 
+			window.location.replace(htmllink);
+		};
+		function clickLink(){
+			htmllink = $( "#test" ).html();
+			if (thisLink == htmllink ) {
+				load_side(htmllink);
+			}
+		};
+		$( this ).css( "color", "red" );
+		$( "#test" ).text($( this ).html());
+		setTimeout(clickLink, 3000 ); // 3 seconds
+  },function() {
+		$( this ).css( "color", "blue" );
+		$( "#test" ).html("");
+  }
+);
+ 
+</script>
+ 
+</body>
+</html>
