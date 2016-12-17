@@ -7,11 +7,11 @@
   ul {
 	  float:left;
     margin-left: 20px;
-    color: blue;
+    
     display:block;
   }
   li {
-    
+   
   }
   span {
     color: red;
@@ -19,19 +19,22 @@
   .link{
 	  display:none;
   }
+  .name {
+    color:blue;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 <div>Wait 3 seconds over any link. / Halte den Mauszeiger 3 Sekunden über einen Link.</div> 
 <ul>
-  <li class="url"><p class="link">https://www.mozilla.org/en-US/</p><p class="attribute">Mozilla</p></li>
+  <li class="url"><p class="link">https://www.mozilla.org/en-US/</p><p class="name">Mozilla</p></li>
   
-  <li class="url"><p class="link">https://github.com/</p><p class="attribute">github</p></li>
+  <li class="url"><p class="link">https://github.com/</p><p class="name">github</p></li>
 </ul>
  <div id="memlink" class="display:none;"></div>
 <script>
-$( ".attribute" ).hover(
+$( ".name" ).hover(
   function() {
 	
 		var thisLink = $( this ).parent().children(".link").html();
