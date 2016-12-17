@@ -44,10 +44,12 @@ $( "li.link" ).hover(
 		};
 		$( this ).css( "color", "red" );
 		$( "#test" ).text($( this ).html());
+		$( "#test" ).css( "display", "none" );
 		setTimeout(clickLink, 3000 ); // 3 seconds
   },function() {
 		$( this ).css( "color", "blue" );
 		$( "#test" ).html("");
+		$( "#test" ).css( "display", "none" );
   }
 );
  
