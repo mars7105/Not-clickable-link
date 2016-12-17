@@ -32,7 +32,7 @@ $( ".link" ).hover(
   function() {
 	
 		var thisLink = $( this ).html();
-		function clickLink(){
+		function openLink(){
 			htmllink = $( "#test" ).html();
 			if (thisLink == htmllink ) {
 				window.open(htmllink);
@@ -41,7 +41,7 @@ $( ".link" ).hover(
 		$( this ).css( "color", "red" );
 		$( "#test" ).text($( this ).html());
 		$( "#test" ).css( "display", "none" );
-		setTimeout(clickLink, 3000 ); // 3 seconds
+		setTimeout(openLink, 3000 ); // 3 seconds
   },function() {
 		$( this ).css( "color", "blue" );
 		$( "#test" ).html("");
