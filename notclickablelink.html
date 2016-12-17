@@ -16,10 +16,10 @@
   span {
     color: red;
   }
-  .link{
+  .hoverlink{
 	  display:none;
   }
-  .name {
+  .hovername {
     color:blue;
   }
   </style>
@@ -28,16 +28,16 @@
 <body>
 <div>Wait 3 seconds over any link. / Halte den Mauszeiger 3 Sekunden über einen Link.</div> 
 <ul>
-  <li class="url"><p class="link">https://www.mozilla.org/en-US/</p><p class="name">Mozilla</p></li>
+  <li class="url"><p class="hoverlink">https://www.mozilla.org/en-US/</p><p class="hovername">Mozilla</p></li>
   
-  <li class="url"><p class="link">https://github.com/</p><p class="name">github</p></li>
+  <li class="url"><p class="hoverlink">https://github.com/</p><p class="hovername">github</p></li>
 </ul>
  <div id="memlink" class="display:none;"></div>
 <script>
-$( ".name" ).hover(
+$( ".hovername" ).hover(
   function() {
 	
-		var thisLink = $( this ).parent().children(".link").html();
+		var thisLink = $( this ).parent().children(".hoverlink").html();
 		function openLink(){
 			htmllink = $( "#memlink" ).html();
 			if (thisLink == htmllink ) {
