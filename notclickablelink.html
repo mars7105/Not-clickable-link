@@ -4,20 +4,11 @@
   <meta charset="utf-8">
   <title>hover demo</title>
   <style>
-  ul {
-	  float:left;
-    margin-left: 20px;
-    
-    display:block;
-  }
-  li {
-   
-  }
-  span {
-    color: red;
+  .url {
+    margin:15px;
   }
   .hoverlink{
-	  display:none;
+	display:none;
   }
   .hovername {
     color:blue;
@@ -27,11 +18,11 @@
 </head>
 <body>
 <div>Wait 3 seconds over any link. / Halte den Mauszeiger 3 Sekunden über einen Link.</div> 
-<ul>
-  <li class="url"><p class="hoverlink">https://www.mozilla.org/en-US/</p><p class="hovername">Mozilla</p></li>
+
+  <div class="url"><p class="hoverlink">https://www.mozilla.org/en-US/</p><p class="hovername">Mozilla</p></div>
   
-  <li class="url"><p class="hoverlink">https://github.com/</p><p class="hovername">github</p></li>
-</ul>
+  <div class="url"><p class="hoverlink">https://github.com/</p><p class="hovername">github</p></div>
+
  <div id="memlink" class="display:none;"></div>
 <script>
 $( ".hovername" ).hover(
