@@ -29,26 +29,26 @@
   
   <li class="url"><p class="link">https://github.com/</p><p class="attribute">github</p></li>
 </ul>
- <div id="test" class="display:none;"></div>
+ <div id="memlink" class="display:none;"></div>
 <script>
-$( ".url" ).hover(
+$( ".attribute" ).hover(
   function() {
 	
-		var thisLink = $( this ).children(".link").html();
+		var thisLink = $( this ).parent().children(".link").html();
 		function openLink(){
-			htmllink = $( "#test" ).html();
+			htmllink = $( "#memlink" ).html();
 			if (thisLink == htmllink ) {
 				window.open(htmllink);
 			}
 		};
 		$( this ).css( "color", "red" );
-		$( "#test" ).text($( this ).children(".link").html());
-		$( "#test" ).css( "display", "none" );
+		$( "#memlink" ).text(thisLink);
+		$( "#memlink" ).css( "display", "none" );
 		setTimeout(openLink, 3000 ); // 3 seconds
   },function() {
 		$( this ).css( "color", "blue" );
-		$( "#test" ).html("");
-		$( "#test" ).css( "display", "none" );
+		$( "#memlink" ).html("");
+		$( "#memlink" ).css( "display", "none" );
   }
 );
  
