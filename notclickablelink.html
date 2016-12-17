@@ -28,18 +28,14 @@
 </ul>
  <div id="test" class="display:none;"></div>
 <script>
-$( "li.link" ).hover(
+$( ".link" ).hover(
   function() {
 	
 		var thisLink = $( this ).html();
-		function load_side( htmllink){
-		 
-			window.location.replace(htmllink);
-		};
 		function clickLink(){
 			htmllink = $( "#test" ).html();
 			if (thisLink == htmllink ) {
-				load_side(htmllink);
+				window.open(htmllink);
 			}
 		};
 		$( this ).css( "color", "red" );
